@@ -75,10 +75,7 @@ class TodoList extends Component {
         <button class="deleteAll" onClick={this.removeAllToDo}>Borrar todos los Recordatorios</button>
         <button onClick={this.resetToDos}>Recargar To Do List</button>
 
-        {/* {
-          title&&description?
-          <p>Último recordatorio añadido: {title} {description}$</p>
-          :""} */}
+      
       </div>
 
     );

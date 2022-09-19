@@ -1,13 +1,24 @@
 import React, { Component } from "react";
-import TodoList from "./TodoList";
+import { Route, Routes } from 'react-router-dom'
+import Weather from '../Main/Weather';
+import TodoList from '../Main/TodoList';
+import Home from '../Main/Home';
+import NotFound from '../NotFound'
 
-class Main extends Component {
+
+export class Main extends Component {
   render() {
-    return <div>
-      <h1>To Do List</h1>
-      <TodoList/>
-      </div>;
+    return (
+      <main>
+        <Routes>
+          <Route element={<Weather/>} path={"/weather"} />
+          <Route element={<Home/>} path={"/"} />
+          <Route element={<TodoList/>} path={"/todo"} />
+          <Route element={<NotFound/>} path={"/*"} />
+        </Routes>
+      </main>
+    )
   }
 }
 
-export default Main;
+export default Main
